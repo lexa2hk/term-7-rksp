@@ -1,9 +1,5 @@
-version: '3.8'
-
 services:
   file-server-instance0:
-    networks:
-      - my-network
     build:
       context: ./practice5-s3-minio
       dockerfile: Dockerfile
@@ -11,8 +7,6 @@ services:
       - "8080:8080"
 
   file-server-instance1:
-    networks:
-      - my-network
     build:
       context: ./practice5-s3-minio
       dockerfile: Dockerfile
@@ -20,8 +14,6 @@ services:
       - "8081:8080"
 
   file-server-instance2:
-    networks:
-      - my-network
     build:
       context: ./practice5-s3-minio
       dockerfile: Dockerfile
@@ -29,8 +21,6 @@ services:
       - "8082:8080"
 
   nginx:
-    networks:
-      - my-network
     build:
       context: ./practice5-nginx
       dockerfile: Dockerfile
@@ -42,5 +32,3 @@ services:
       - file-server-instance0
       - file-server-instance1
       - file-server-instance2
-networks:
-  my-network:

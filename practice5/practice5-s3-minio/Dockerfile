@@ -4,7 +4,7 @@ ADD . /project
 WORKDIR /project
 
 ARG JAR_FILE=practice5-s3-minio.jar
-RUN gradle build -x test
+RUN gradle build
 RUN ["sh", "-c", "jar -xf build/libs/${JAR_FILE}"]
 RUN jdeps --ignore-missing-deps -q \
     --recursive \
