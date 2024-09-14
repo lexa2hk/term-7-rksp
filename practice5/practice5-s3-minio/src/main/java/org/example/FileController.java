@@ -22,15 +22,15 @@ public class FileController {
 
     @PostMapping("/upload")
     public Long uploadFile(@RequestParam("file") MultipartFile file) throws IOException {
-        try {
-            client0.uploadFile(file);
-        } catch (Exception ignored){}
-        try {
-            client1.uploadFile(file);
-        } catch (Exception ignored){}
-        try {
-            client2.uploadFile(file);
-        } catch (Exception ignored){}
+//        try {
+//            client0.uploadFile(file);
+//        } catch (Exception ignored){}
+//        try {
+//            client1.uploadFile(file);
+//        } catch (Exception ignored){}
+//        try {
+//            client2.uploadFile(file);
+//        } catch (Exception ignored){}
         return repository.save(FileEntity.builder().bytes(file.getBytes()).build()).getId();
     }
 

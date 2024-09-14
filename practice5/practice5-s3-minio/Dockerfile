@@ -31,5 +31,5 @@ ENV PATH $JAVA_HOME/bin:$PATH
 COPY --from=build /myjre $JAVA_HOME
 COPY --from=build /project/build/libs/$JAR_FILE /libs/
 COPY --from=build /project/build/resources /resources/
-
+EXPOSE 8080
 CMD ["java", "-jar", "libs/practice5-s3-minio.jar"]
