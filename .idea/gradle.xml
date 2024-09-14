@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/practice1" />
+            <option value="$PROJECT_DIR$/practice2" />
+            <option value="$PROJECT_DIR$/practice3" />
+            <option value="$PROJECT_DIR$/practice4" />
+            <option value="$PROJECT_DIR$/practice5" />
+            <option value="$PROJECT_DIR$/practice5/practice5-eureka-server" />
+            <option value="$PROJECT_DIR$/practice5/practice5-nginx" />
+            <option value="$PROJECT_DIR$/practice5/practice5-s3-minio" />
+            <option value="$PROJECT_DIR$/practice5/practice5-s3-server" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
