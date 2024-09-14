@@ -15,7 +15,9 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("io.minio:minio:8.5.12")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("com.h2database:h2:2.3.232")
+    implementation("org.springframework.cloud:spring-cloud-starter-openfeign:4.1.3")
 
     implementation("org.projectlombok:lombok:1.18.28")
     compileOnly("org.projectlombok:lombok:1.18.32")

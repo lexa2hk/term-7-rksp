@@ -32,4 +32,4 @@ COPY --from=build /myjre $JAVA_HOME
 COPY --from=build /project/build/libs/$JAR_FILE /libs/
 COPY --from=build /project/build/resources /resources/
 
-CMD ["java", "-Djavax.net.debug=ssl,handshake", "-jar", "libs/practice5-s3-minio.jar"]
+CMD ["java", "-jar", "libs/practice5-s3-minio.jar"]
