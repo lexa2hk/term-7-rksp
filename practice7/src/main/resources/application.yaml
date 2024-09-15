@@ -1,0 +1,15 @@
+spring:
+  r2dbc:
+    url: r2dbc:h2:mem:///beerbardb;DB_CLOSE_DELAY=-1;
+    username: sa
+    password:
+  liquibase:
+    enabled: true
+  h2:
+    console:
+      enabled: true
+
+logging:
+  level:
+    io.r2dbc.postgresql.QUERY: DEBUG # for queries
+    io.r2dbc.postgresql.PARAM: DEBUG # for parameters

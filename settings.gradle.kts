@@ -25,3 +25,4 @@ include("practice5:practice5-s3-server")
 findProject(":practice5:practice5-s3-server")?.name = "practice5-s3-server"
 include("practice5:practice5-nginx")
 findProject(":practice5:practice5-nginx")?.name = "practice5-nginx"
+include("practice7")
