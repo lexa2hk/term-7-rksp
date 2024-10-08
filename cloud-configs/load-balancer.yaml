@@ -1,9 +1,9 @@
 server.port: 9000
 
 spring.cloud.loadbalancer.clients:
-        user-service:
-          instances:
-            - uri: http://localhost:8080
+  user-service:
+    instances:
+      - uri: http://localhost:8080
 #            - uri: http://localhost:8082
 #            - uri: http://localhost:8083
 
