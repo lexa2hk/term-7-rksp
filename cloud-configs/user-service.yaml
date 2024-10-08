@@ -8,3 +8,5 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
+
+user.fullname.service.url: http://localhost:8081
