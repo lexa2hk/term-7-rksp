@@ -1,14 +1,14 @@
 server.port: 8080
-eureka.client.service-url.default-zone: http://localhost:8761/eureka/
+eureka.client.service-url.default-zone: http://service-discovery:8761/eureka/
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
-    password: root
+    url: jdbc:postgresql://postgres-db1:5432/db1
+    username: user1
+    password: password1
   jpa:
     hibernate:
       ddl-auto: create
 
 user:
-  role.service.url: http://localhost:8082
-  fullname.service.url: http://localhost:8081
+  role.service.url: http://user-role-service:8082
+  fullname.service.url: http://user-fullname-service:8081
