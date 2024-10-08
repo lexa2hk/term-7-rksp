@@ -4,6 +4,13 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/practice4/РКСП.practice4.main.iml" filepath="$PROJECT_DIR$/.idea/modules/practice4/РКСП.practice4.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/practice5/practice5-s3-minio/РКСП.practice5.practice5-s3-minio.main.iml" filepath="$PROJECT_DIR$/.idea/modules/practice5/practice5-s3-minio/РКСП.practice5.practice5-s3-minio.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/practice7/РКСП.practice7.main.iml" filepath="$PROJECT_DIR$/.idea/modules/practice7/РКСП.practice7.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/practice8/practice8-api-gateway/РКСП.practice8.practice8-api-gateway.main.iml" filepath="$PROJECT_DIR$/.idea/modules/practice8/practice8-api-gateway/РКСП.practice8.practice8-api-gateway.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/practice8/practice8-load-balancer/РКСП.practice8.practice8-load-balancer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/practice8/practice8-load-balancer/РКСП.practice8.practice8-load-balancer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/practice8/practice8-user-fullname-service/РКСП.practice8.practice8-user-fullname-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/practice8/practice8-user-fullname-service/РКСП.practice8.practice8-user-fullname-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/practice8/practice8-user-role-service/РКСП.practice8.practice8-user-role-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/practice8/practice8-user-role-service/РКСП.practice8.practice8-user-role-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/practice8/practice8-user-service/РКСП.practice8.practice8-user-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/practice8/practice8-user-service/РКСП.practice8.practice8-user-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/practice8/practice8-user-service/РКСП.practice8.practice8-user-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/practice8/practice8-user-service/РКСП.practice8.practice8-user-service.test.iml" />
     </modules>
   </component>
 </project>

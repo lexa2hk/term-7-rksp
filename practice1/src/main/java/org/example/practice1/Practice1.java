@@ -6,14 +6,12 @@ import java.util.concurrent.ExecutionException;
 public class Practice1 {
 
     public static void runCode() throws InterruptedException, ExecutionException {
-        // Step 1: Create an array of 10,000 random integers
         int[] array = new int[10000];
         Random random = new Random();
         for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt(100); // Fill with random integers from 0 to 99
+            array[i] = random.nextInt(100);
         }
 
-        // Step 2: Sequential implementation
         long startTime = System.currentTimeMillis();
         long sequentialSum = SequentialSum.findSum(array);
         long endTime = System.currentTimeMillis();
@@ -21,7 +19,6 @@ public class Practice1 {
         System.out.println("Sequential time: " + (endTime - startTime) + " ms");
         System.out.print("\n");
 
-        // Step 3: Multithreaded implementation
         startTime = System.currentTimeMillis();
         long multiThreadedSum = MultiThreadedSum.findSum(array);
         endTime = System.currentTimeMillis();
@@ -30,7 +27,6 @@ public class Practice1 {
         System.out.print("\n");
 
 
-        // Step 4: ForkJoin implementation
         startTime = System.currentTimeMillis();
         long forkJoinSum = ForkJoinSum.findSum(array);
         endTime = System.currentTimeMillis();

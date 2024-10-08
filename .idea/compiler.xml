@@ -8,7 +8,14 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.32/17d46b3e205515e1e8efd3ee4d57ce8018914163/lombok-1.18.32.jar" />
         </processorPath>
         <module name="РКСП.practice4.main" />
+        <module name="РКСП.practice8.practice8-user-role-service.main" />
+        <module name="РКСП.practice7.main" />
         <module name="РКСП.practice5.practice5-s3-minio.main" />
+        <module name="РКСП.practice8.practice8-user-service.main" />
+        <module name="РКСП.practice8.practice8-user-service.test" />
+        <module name="РКСП.practice8.practice8-api-gateway.main" />
+        <module name="РКСП.practice8.practice8-user-fullname-service.main" />
+        <module name="РКСП.practice8.practice8-load-balancer.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="21" />

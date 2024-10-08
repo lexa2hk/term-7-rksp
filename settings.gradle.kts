@@ -26,3 +26,18 @@ findProject(":practice5:practice5-s3-server")?.name = "practice5-s3-server"
 include("practice5:practice5-nginx")
 findProject(":practice5:practice5-nginx")?.name = "practice5-nginx"
 include("practice7")
+include("practice8")
+include("practice8:practice8-service-discovery")
+findProject(":practice8:practice8-service-discovery")?.name = "practice8-service-discovery"
+include("practice8:practice8-config-server")
+findProject(":practice8:practice8-config-server")?.name = "practice8-config-server"
+include("practice8:practice8-user-service")
+findProject(":practice8:practice8-user-service")?.name = "practice8-user-service"
+include("practice8:practice8-user-fullname-service")
+findProject(":practice8:practice8-user-fullname-service")?.name = "practice8-user-fullname-service"
+include("practice8:practice8-user-role-service")
+findProject(":practice8:practice8-user-role-service")?.name = "practice8-user-role-service"
+include("practice8:practice8-load-balancer")
+findProject(":practice8:practice8-load-balancer")?.name = "practice8-load-balancer"
+include("practice8:practice8-api-gateway")
+findProject(":practice8:practice8-api-gateway")?.name = "practice8-api-gateway"

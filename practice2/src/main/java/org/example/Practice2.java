@@ -3,7 +3,7 @@ package org.example;
 import java.io.IOException;
 
 public class Practice2 {
-    public static void runCode() throws IOException {
+    public static void runCode() throws IOException, InterruptedException {
         FileReaderNIO.readFile();
 
         FileCopyStream.copyFile();
@@ -13,6 +13,6 @@ public class Practice2 {
 
         CheckSumCalculator.calculateCheckSum();
 
-//        DirectoryWatcher.watchDirectory(); // Запустить отдельно, бесконечный поллинг
+        DirectoryWatcher.watchDirectory(); // Запустить отдельно, бесконечный поллинг
     }
 }
