@@ -53,11 +53,3 @@ tasks.jar {
         attributes["Main-Class"] = "org.example.App"
     }
 }
-
-tasks.bootJar {
-    archiveBaseName.set("app") // Set the base name of the uber JAR file
-    archiveVersion.set("") // Optionally set the version to an empty string if you don't want it in the name
-    manifest {
-        attributes["Main-Class"] = "org.example.App"
-    }
-}
