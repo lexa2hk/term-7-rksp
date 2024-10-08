@@ -1,0 +1,10 @@
+server.port: 8081
+
+spring.cloud.loadbalancer.clients:
+        user-service:
+          instances:
+            - uri: http://localhost:8080
+#            - uri: http://localhost:8082
+#            - uri: http://localhost:8083
+
+eureka.client.service-url.default-zone: http://localhost:8761/eureka/
