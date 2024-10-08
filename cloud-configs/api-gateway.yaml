@@ -5,3 +5,16 @@ spring.cloud.gateway.routes:
     uri: http://localhost:9000
     predicates:
       - Path=/api/users/**
+
+spring.security.oauth2.client:
+  registration.github:
+    client-id: Ov23lini2XzRbc56PxiH
+    client-secret: 604f135db93e2cb445e72f94c958672d6f85e475
+    authorization-grant-type: authorization_code
+    redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+    scope: read:user,user:email
+  provider.github:
+    authorization-uri: https://github.com/login/oauth/authorize
+    token-uri: https://github.com/login/oauth/access_token
+    user-info-uri: https://api.github.com/user
+    user-name-attribute: login
