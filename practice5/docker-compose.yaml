@@ -6,22 +6,24 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
+    volumes:
+      - uploads:/app/uploads
 
-#  file-server-instance01:
-#    container_name: file-server-instance1
-#    build:
-#      context: ./practice5-s3-minio
-#      dockerfile: Dockerfile
-#    ports:
-#      - "8081:8080"
-#
-#  file-server-instance02:
-#    container_name: file-server-instance2
-#    build:
-#      context: ./practice5-s3-minio
-#      dockerfile: Dockerfile
-#    ports:
-#      - "8082:8080"
+  file-server-instance01:
+    container_name: file-server-instance1
+    build:
+      context: ./practice5-s3-minio
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8080"
+
+  file-server-instance02:
+    container_name: file-server-instance2
+    build:
+      context: ./practice5-s3-minio
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8080"
 
   nginx:
     build:
@@ -33,5 +35,9 @@ services:
       - ./practice5-nginx/nginx.conf:/etc/nginx/nginx.conf
     depends_on:
       - file-server-instance00
-#      - file-server-instance01
-#      - file-server-instance02
+      - file-server-instance01
+      - file-server-instance02
+
+
+volumes:
+  uploads:
