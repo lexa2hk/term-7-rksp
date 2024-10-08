@@ -5,13 +5,13 @@ WORKDIR /project
 
 ARG JAR_FILE=app.jar
 RUN gradle build -x test
-RUN ["sh", "-c", "jar -xf practice8-load-balancer/build/libs/${JAR_FILE}"]
+RUN ["sh", "-c", "jar -xf build/libs/${JAR_FILE}"]
 RUN jdeps --ignore-missing-deps -q \
     --recursive \
     --multi-release 21 \
     --print-module-deps \
     --class-path 'BOOT-INF/lib/*' \
-    practice8-load-balancer/build/libs/${JAR_FILE} > deps.info
+    build/libs/${JAR_FILE} > deps.info
 
 RUN jlink \
     --add-modules $(cat deps.info) \
@@ -29,7 +29,7 @@ ENV JAVA_HOME /java
 ENV PATH $JAVA_HOME/bin:$PATH
 
 COPY --from=build /myjre $JAVA_HOME
-COPY --from=build /project/practice8-load-balancer/build/libs/$JAR_FILE /libs/
-COPY --from=build /project/practice8-load-balancer/build/resources /resources/
+COPY --from=build /project/build/libs/$JAR_FILE /libs/
+COPY --from=build /project/build/resources /resources/
 
 CMD ["java", "-jar", "libs/app.jar"]
