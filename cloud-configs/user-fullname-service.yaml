@@ -2,7 +2,7 @@ server.port: 8081
 eureka.client.service-url.defaultZone: http://service-discovery:8761/eureka/
 spring:
   datasource:
-    url: jdbc:postgresql://postgres-db2:5433/db2
+    url: jdbc:postgresql://postgres-db2:5432/db2
     username: user2
     password: password2
   jpa:
