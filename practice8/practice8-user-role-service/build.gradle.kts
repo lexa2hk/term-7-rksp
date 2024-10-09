@@ -52,3 +52,7 @@ tasks.jar {
         attributes["Main-Class"] = "org.example.App"
     }
 }
+
+tasks.bootJar {
+    archiveBaseName.set("practice8-user-role-service")
+}
