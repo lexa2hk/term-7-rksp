@@ -18,3 +18,5 @@ spring.security.oauth2.client:
     token-uri: https://github.com/login/oauth/access_token
     user-info-uri: https://api.github.com/user
     user-name-attribute: login
+
+eureka.client.service-url.defaultZone: http://service-discovery:8761/eureka/

@@ -1,5 +1,5 @@
 server.port: 8082
-eureka.client.service-url.default-zone: http://service-discovery:8761/eureka/
+eureka.client.service-url.defaultZone: http://service-discovery:8761/eureka/
 spring:
   datasource:
     url: jdbc:postgresql://postgres-db3:5434/db3

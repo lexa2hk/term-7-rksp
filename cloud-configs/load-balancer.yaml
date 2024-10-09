@@ -7,4 +7,4 @@ spring.cloud.loadbalancer.clients:
 #            - uri: http://localhost:8082
 #            - uri: http://localhost:8083
 
-eureka.client.service-url.default-zone: http://service-discovery:8761/eureka/
+eureka.client.service-url.defaultZone: http://service-discovery:8761/eureka/

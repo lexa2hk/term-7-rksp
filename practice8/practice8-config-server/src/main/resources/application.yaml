@@ -48,4 +48,4 @@ spring.cloud.config.server.git:
   uri: git@github.com:KLINY1337/term-7-rksp.git
   ignore-local-ssh-settings: true
 
-eureka.client.service-url.default-zone: http://service-discovery:8761/eureka/
+eureka.client.service-url.defaultZone: http://service-discovery:8761/eureka/
