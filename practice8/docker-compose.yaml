@@ -10,7 +10,8 @@ services:
       - "5432:5432"
     volumes:
       - db1_data:/var/lib/postgresql/data
-    networks: rksp-network
+    networks:
+      - rksp-network
 
   postgres-db2:
     image: postgres:16-alpine3.19
@@ -23,7 +24,8 @@ services:
       - "5433:5432"  # Expose on a different port
     volumes:
       - db2_data:/var/lib/postgresql/data
-    networks: rksp-network
+    networks:
+      - rksp-network
 
   postgres-db3:
     image: postgres:16-alpine3.19
@@ -36,7 +38,8 @@ services:
       - "5434:5432"  # Expose on a different port
     volumes:
       - db3_data:/var/lib/postgresql/data
-    networks: rksp-network
+    networks:
+      - rksp-network
 
   service-discovery:
     build:
@@ -50,7 +53,8 @@ services:
       - postgres-db3
     expose:
       - "8761"
-    networks: rksp-network
+    networks:
+      - rksp-network
 
   config-server:
     build:
@@ -62,7 +66,8 @@ services:
       - service-discovery
     expose:
       - "8888"
-    networks: rksp-network
+    networks:
+      - rksp-network
 
   user-service:
     build:
@@ -76,7 +81,8 @@ services:
     restart: always
     expose:
       - "8080"
-    networks: rksp-network
+    networks:
+      - rksp-network
 
   user-fullname-service:
     build:
@@ -89,7 +95,8 @@ services:
     restart: always
     expose:
       - "8081"
-    networks: rksp-network
+    networks:
+      - rksp-network
 
   user-role-service:
     build:
@@ -102,7 +109,8 @@ services:
     restart: always
     expose:
       - "8082"
-    networks: rksp-network
+    networks:
+      - rksp-network
 
   load-balancer:
     build:
@@ -115,7 +123,8 @@ services:
     restart: always
     expose:
       - "9000"
-    networks: rksp-network
+    networks:
+      - rksp-network
 
   api-gateway:
     build:
@@ -128,7 +137,8 @@ services:
     restart: always
     expose:
       - "80"
-    networks: rksp-network
+    networks:
+      - rksp-network
 
 volumes:
   db1_data:
