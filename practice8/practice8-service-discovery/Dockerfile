@@ -4,7 +4,8 @@ ADD . /project
 WORKDIR /project
 
 ARG JAR_FILE=practice8-service-discovery.jar
-RUN gradle build -x test && ls -l build/libs
+RUN gradle build -x test
+RUN ls -l build/libs
 RUN ["sh", "-c", "jar -xf build/libs/${JAR_FILE}"]
 RUN jdeps --ignore-missing-deps -q \
     --recursive \
