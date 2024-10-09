@@ -64,6 +64,7 @@ services:
     depends_on:
       - user-fullname-service
       - user-role-service
+    restart: always
 
   user-fullname-service:
     build:
@@ -73,6 +74,7 @@ services:
       - "8081:8081"  # Expose on port 8081
     depends_on:
       - config-server
+    restart: always
 
   user-role-service:
     build:
@@ -82,6 +84,7 @@ services:
       - "8082:8082"  # Expose on port 8082
     depends_on:
       - config-server
+    restart: always
 
   load-balancer:
     build:
@@ -91,6 +94,7 @@ services:
       - "9000:9000"  # Expose on port 9000
     depends_on:
       - user-service
+    restart: always
 
   api-gateway:
     build:
@@ -100,6 +104,7 @@ services:
       - "80:80"  # Expose on port 80
     depends_on:
       - load-balancer
+    restart: always
 
 volumes:
   db1_data:
