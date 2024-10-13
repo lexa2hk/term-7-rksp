@@ -8,9 +8,11 @@ metadata:
     io.kompose.service: config-server
   name: config-server
 spec:
+  type: NodePort  # Specify the service type as NodePort
   ports:
     - name: http
       port: 8888
       targetPort: 8888
+      nodePort: 30000  # Optional: specify a custom NodePort (between 30000-32767)
   selector:
     io.kompose.service: config-server

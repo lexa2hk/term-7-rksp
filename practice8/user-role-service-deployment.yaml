@@ -21,7 +21,7 @@ spec:
         io.kompose.service: user-role-service
     spec:
       containers:
-        - image: docker.io/library/practice8-user-role-service:latest
+        - image: localhost:5000/practice8-user-role-service
           name: user-role-service
           ports:
             - containerPort: 8082

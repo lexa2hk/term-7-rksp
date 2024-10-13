@@ -21,7 +21,7 @@ spec:
         io.kompose.service: user-fullname-service
     spec:
       containers:
-        - image: docker.io/library/practice8-user-fullname-service:latest
+        - image: localhost:5000/practice8-user-fullname-service
           name: user-fullname-service
           ports:
             - containerPort: 8081

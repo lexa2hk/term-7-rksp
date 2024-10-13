@@ -21,7 +21,7 @@ spec:
         io.kompose.service: service-discovery
     spec:
       containers:
-        - image: docker.io/library/practice8-service-discovery:latest
+        - image: localhost:5000/practice8-service-discovery
           name: service-discovery
           ports:
             - containerPort: 8761

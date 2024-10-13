@@ -13,5 +13,6 @@ spec:
     - name: http
       port: 80
       targetPort: 80
+      nodePort: 30001
   selector:
     io.kompose.service: api-gateway
