@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-
+// Черномуров Семён Андреевич ИКБО-10-21
 pragma solidity ^0.8.21;
 
 contract Exchange {

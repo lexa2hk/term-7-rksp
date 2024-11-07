@@ -14,7 +14,6 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestControllerAdvice
 public class BarController {
-
     private final BarService barService;
 
     @PostMapping("/pour-one")

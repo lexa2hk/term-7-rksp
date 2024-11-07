@@ -32,12 +32,17 @@ public class FileController {
     }
 
     @PostMapping("/upload")
-    public int uploadFile(@RequestParam("file") MultipartFile file) throws IOException {
-        currentId++;
-        Path filePath = Paths.get(uploadDir, file.getOriginalFilename());
-        file.transferTo(filePath);
-        fileStorage.put(currentId, filePath.toString());
-        return currentId;
+    public Long uploadFile(@RequestParam("file") MultipartFile file) throws IOException {
+//        try {
+//            client0.uploadFile(file);
+//        } catch (Exception ignored){}
+//        try {
+//            client1.uploadFile(file);
+//        } catch (Exception ignored){}
+//        try {
+//            client2.uploadFile(file);
+//        } catch (Exception ignored){}
+        return repository.save(FileEntity.builder().bytes(file.getBytes()).build()).getId();
     }
 
     @GetMapping("/{id}")

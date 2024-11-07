@@ -3,7 +3,7 @@ package org.example.practice1;
 import java.util.Random;
 import java.util.concurrent.ExecutionException;
 
-public class Practice1 {
+public class Practice1 { // Черномуров Семён Андреевич ИКБО-10-21
 
     public static void runCode() throws InterruptedException, ExecutionException {
         int[] array = new int[10000];

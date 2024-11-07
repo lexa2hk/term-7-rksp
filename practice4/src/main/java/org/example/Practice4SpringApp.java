@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
-public class Practice4SpringApp {
+public class Practice4SpringApp { // Черномуров Семён Андреевич ИКБО-10-21
     public static void main(String[] args) {
         ConfigurableApplicationContext ctx = SpringApplication.run(Practice4SpringApp.class, args);
 

@@ -9,23 +9,19 @@ import java.util.concurrent.TimeUnit;
 
 public class SensorSystem {
 
-    // Constants for thresholds
     private static final int TEMPERATURE_THRESHOLD = 25;
     private static final int CO2_THRESHOLD = 70;
 
     public static void startListening() {
 
-        // Observable for temperature sensor
         Observable<Integer> temperatureSensor = Observable.interval(1, TimeUnit.SECONDS)
-                .map(tick -> new Random().nextInt(16) + 15) // Generates a random temperature between 15 and 30
+                .map(tick -> new Random().nextInt(16) + 15)
                 .subscribeOn(Schedulers.io());
 
-        // Observable for CO2 sensor
         Observable<Integer> co2Sensor = Observable.interval(1, TimeUnit.SECONDS)
-                .map(tick -> new Random().nextInt(71) + 30) // Generates a random CO2 value between 30 and 100
+                .map(tick -> new Random().nextInt(71) + 30)
                 .subscribeOn(Schedulers.io());
 
-        // Combine the two sensors and check for conditions
         Disposable disposable = Observable.combineLatest(
                         temperatureSensor,
                         co2Sensor,
@@ -43,13 +39,13 @@ public class SensorSystem {
                     } else if (co2Exceeded) {
                         System.out.println("Warning: CO2 level exceeded safe limit.");
                     } else {
+                        //Черномуров Семён Андреевич ИКБО-10-21
                         System.out.println("All readings are within safe limits.");
                     }
                 });
 
-        // Keep the program running
         try {
-            Thread.sleep(20000); // Run for 20 seconds
+            Thread.sleep(20000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

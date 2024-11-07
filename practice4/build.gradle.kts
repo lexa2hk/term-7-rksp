@@ -24,6 +24,8 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test:3.3.3")
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+    testImplementation("io.projectreactor:reactor-test:3.6.11")
+
 }
 
 tasks.test {

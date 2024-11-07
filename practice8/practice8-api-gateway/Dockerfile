@@ -3,6 +3,7 @@ FROM gradle:8.7-jdk21-alpine as build
 ADD . /project
 WORKDIR /project
 
+# Черномуров Семён Андреевич ИКБО-10-21
 ARG JAR_FILE=practice8-api-gateway.jar
 RUN gradle build -x test
 RUN ["sh", "-c", "jar -xf build/libs/${JAR_FILE}"]

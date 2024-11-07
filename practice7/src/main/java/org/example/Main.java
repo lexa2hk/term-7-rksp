@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.r2dbc.core.DatabaseClient;
 
 @SpringBootApplication
-public class Main {
+public class Main { // Черномуров Семён Андреевич ИКБО-10-21
 
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
