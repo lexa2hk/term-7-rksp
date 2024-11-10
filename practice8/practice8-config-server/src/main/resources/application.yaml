@@ -5,10 +5,6 @@ spring.cloud.config.server.git:
     - cloud-configs
   clone-on-start: true
   default-label: master
-  private-key: |
-    -----BEGIN OPENSSH PRIVATE KEY-----
-    
-    -----END OPENSSH PRIVATE KEY-----
   uri: git@github.com:lexa2hk/term-7-rksp.git
   ignore-local-ssh-settings: true
 
