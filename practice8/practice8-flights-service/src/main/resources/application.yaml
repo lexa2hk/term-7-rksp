@@ -1,4 +1,4 @@
-spring.application.name: user-fullname-service
+spring.application.name: flights-service
 
 spring:
   config.import: configserver:http://config-server:8888

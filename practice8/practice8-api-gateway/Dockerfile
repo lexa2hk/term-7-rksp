@@ -1,36 +1,23 @@
-FROM gradle:8.7-jdk21-alpine as build
+FROM gradle:8.7-jdk21-alpine AS build
 
+# Копируем проект и устанавливаем рабочую директорию
 ADD . /project
 WORKDIR /project
 
-# Черномуров Семён Андреевич ИКБО-10-21
+# Переменная для имени JAR-файла
 ARG JAR_FILE=practice8-api-gateway.jar
+
+# Сборка проекта без тестов
 RUN gradle build -x test
-RUN ["sh", "-c", "jar -xf build/libs/${JAR_FILE}"]
-RUN jdeps --ignore-missing-deps -q \
-    --recursive \
-    --multi-release 21 \
-    --print-module-deps \
-    --class-path 'BOOT-INF/lib/*' \
-    build/libs/${JAR_FILE} > deps.info
 
-RUN jlink \
-    --add-modules $(cat deps.info) \
-    --strip-debug \
-    --compress 2 \
-    --no-header-files \
-    --no-man-pages \
-    --output /myjre
+# Используем стандартный образ OpenJDK вместо кастомного JRE
+FROM eclipse-temurin:21-jdk-alpine
 
-FROM alpine:latest
+# Создаём директории и копируем артефакты
+RUN mkdir /app
+WORKDIR /app
+COPY --from=build /project/build/libs/$JAR_FILE /app/
+COPY --from=build /project/build/resources /app/resources/
 
-ARG JAR_FILE=practice8-api-gateway.jar
-RUN mkdir /java
-ENV JAVA_HOME /java
-ENV PATH $JAVA_HOME/bin:$PATH
-
-COPY --from=build /myjre $JAVA_HOME
-COPY --from=build /project/build/libs/$JAR_FILE /libs/
-COPY --from=build /project/build/resources /resources/
-
-CMD ["java", "-Djavax.net.debug=ssl:handshake", "-jar", "libs/practice8-api-gateway.jar"]
+# Запускаем приложение
+CMD ["java", "-Djavax.net.debug=ssl:handshake", "-jar", "/app/practice8-api-gateway.jar"]
