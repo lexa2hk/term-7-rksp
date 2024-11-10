@@ -11,11 +11,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserFullname {
+public class UserFlights {
 
     private Long id;
 
     private Long userId;
 
-    private String fullname;
+    private String flightCode;
 }

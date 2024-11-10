@@ -1,7 +1,7 @@
 package org.example;
 
 public record UserInfoDto(
-        UserFullname fullname,
+        UserFlights flights,
         UserRole userRole
 ) {
 }
