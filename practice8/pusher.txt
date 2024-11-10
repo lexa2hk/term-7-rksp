@@ -1,0 +1,10 @@
+docker push 192.168.49.2:5000/practice8-user-service      
+docker push 192.168.49.2:5000/practice8-load-balancer     
+docker push 192.168.49.2:5000/practice8-api-gateway       
+docker push 192.168.49.2:5000/practice8-flights-service    
+docker push 192.168.49.2:5000/practice8-user-role-service            
+docker push 192.168.49.2:5000/practice8-service-discovery 
+docker push 192.168.49.2:5000/practice8-config-server     
+
+
+kubectl apply -f flights-service-service.yaml,flights-service-deployment.yaml
