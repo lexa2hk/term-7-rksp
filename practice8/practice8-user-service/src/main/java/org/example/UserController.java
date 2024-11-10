@@ -14,7 +14,7 @@ import java.util.List;
 public class UserController {
 
     private final UserRepository userRepository;
-    private final UserFullnameClient userFullnameClient;
+    private final FlightsServiceClient flightsServiceClient;
     private final UserRoleClient userRoleClient;
 
     @GetMapping("/all")
@@ -42,7 +42,7 @@ public class UserController {
     @GetMapping("/{userId}/info")
     public UserInfoDto getUserInfo(@PathVariable Long userId) {
         return new UserInfoDto(
-                userFullnameClient.getUserFullname(userId),
+                flightsServiceClient.getUserScheduledFlights(userId),
                 userRoleClient.getUserRole(userId)
         );
     }

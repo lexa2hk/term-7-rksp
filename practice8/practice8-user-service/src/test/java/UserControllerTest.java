@@ -1,7 +1,7 @@
 import org.example.User;
 import org.example.UserController;
 import org.example.UserFullname;
-import org.example.UserFullnameClient;
+import org.example.FlightsServiceClient;
 import org.example.UserInfoDto;
 import org.example.UserRepository;
 import org.example.UserRole;
@@ -25,7 +25,7 @@ public class UserControllerTest {
     private UserRepository userRepository;
 
     @Mock
-    private UserFullnameClient userFullnameClient;
+    private FlightsServiceClient flightsServiceClient;
 
     @Mock
     private UserRoleClient userRoleClient;
@@ -46,7 +46,7 @@ public class UserControllerTest {
 
     @Test
     void getUserInfo() {
-        when(userFullnameClient.getUserFullname(anyLong()))
+        when(flightsServiceClient.getUserScheduledFlights(anyLong()))
                 .thenReturn(UserFullname.builder().fullname("testFullName").build());
         when(userRoleClient.getUserRole(anyLong()))
                 .thenReturn(UserRole.builder().roleName("ROLENAME").build());
