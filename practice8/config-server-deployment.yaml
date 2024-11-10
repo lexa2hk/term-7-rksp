@@ -21,7 +21,7 @@ spec:
         io.kompose.service: config-server
     spec:
       containers:
-        - image: localhost:5000/practice8-config-server
+        - image: 192.168.49.2:5000/practice8-config-server
           name: config-server
           ports:
             - containerPort: 8888
