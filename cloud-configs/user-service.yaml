@@ -11,4 +11,4 @@ spring:
 
 user:
   role.service.url: http://user-role-service:8082
-  flight.service.url: http://flights-service:8081
+  flights.service.url: http://flights-service:8081
