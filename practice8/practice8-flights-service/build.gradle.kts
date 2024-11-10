@@ -54,5 +54,5 @@ tasks.jar {
 }
 
 tasks.bootJar {
-    archiveBaseName.set("practice8-user-fullname-service")
+    archiveBaseName.set("practice8-flights-service")
 }

@@ -11,13 +11,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "user_fullnames")
+@Table(name = "user_flights")
 @Builder
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserFullname {
+public class UserFlights {
 
     @Id
     @GeneratedValue
@@ -25,5 +25,5 @@ public class UserFullname {
 
     private Long userId;
 
-    private String fullname;
+    private String flightCode;
 }

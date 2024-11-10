@@ -13,14 +13,14 @@ import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-class UserFullnameControllerUnitTest {
+class UserFlightsControllerUnitTest {
 
     @Mock
-    private UserFullnameRepository userFullnameRepository;
+    private FlightsRepository flightsRepository;
     @Mock
     private UserClient userClient;
     @InjectMocks
-    private org.example.UserFullnameController userFullnameController;
+    private FlightsController flightsController;
 
     @Test
     void testGetUserFullname() {
@@ -36,13 +36,13 @@ class UserFullnameControllerUnitTest {
                                 .id(6L)
                                 .build()
                 ));
-        when(userFullnameRepository.findByUserId(anyLong()))
-                .thenReturn(UserFullname.builder()
-                        .fullname("testFullName")
+        when(flightsRepository.findByUserId(anyLong()))
+                .thenReturn(UserFlights.builder()
+                        .flightCode("SU1763")
                         .build());
 
-        UserFullname actualFullname = userFullnameController.getUserFullname(4L);
+        UserFlights actualFullname = flightsController.getUserScheduledFlights(4L);
 
-        assertThat(actualFullname.getFullname()).isEqualTo("testFullName");
+        assertThat(actualFullname.getFlightCode()).isEqualTo("SU1763");
     }
 }

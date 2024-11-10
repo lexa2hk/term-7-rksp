@@ -13,8 +13,8 @@
         <module name="РКСП.practice8.practice8-user-service.test" />
         <module name="practice8.practice8-api-gateway.РКСП.practice8.practice8-api-gateway.main" />
         <module name="practice7.РКСП.practice7.main" />
-        <module name="practice8.practice8-user-fullname-service.РКСП.practice8.practice8-user-fullname-service.main" />
         <module name="practice8.practice8-user-role-service.РКСП.practice8.practice8-user-role-service.main" />
+        <module name="РКСП.practice8.practice8-flights-service.main" />
         <module name="practice8.practice8-load-balancer.РКСП.practice8.practice8-load-balancer.main" />
       </profile>
     </annotationProcessing>

@@ -33,8 +33,8 @@ include("practice8:practice8-config-server")
 findProject(":practice8:practice8-config-server")?.name = "practice8-config-server"
 include("practice8:practice8-user-service")
 findProject(":practice8:practice8-user-service")?.name = "practice8-user-service"
-include("practice8:practice8-user-fullname-service")
-findProject(":practice8:practice8-user-fullname-service")?.name = "practice8-user-fullname-service"
+include("practice8:practice8-flights-service")
+findProject(":practice8:practice8-flights-service")?.name = "practice8-flights-service"
 include("practice8:practice8-user-role-service")
 findProject(":practice8:practice8-user-role-service")?.name = "practice8-user-role-service"
 include("practice8:practice8-load-balancer")

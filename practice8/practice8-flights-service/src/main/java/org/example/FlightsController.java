@@ -9,33 +9,33 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/user-fullnames")
+@RequestMapping("/api/user")
 @RequiredArgsConstructor
-public class UserFullnameController {
+public class FlightsController {
 
-    private final UserFullnameRepository userFullnameRepository;
+    private final FlightsRepository flightsRepository;
     private final UserClient userClient;
 
-    @GetMapping("/{userId}")
-    public UserFullname getUserFullname(@PathVariable("userId") Long userId) {
-        userFullnameRepository.deleteAll();
+    @GetMapping("/{userId}/scheduled-flights")
+    public UserFlights getUserScheduledFlights(@PathVariable("userId") Long userId) {
+        flightsRepository.deleteAll();
         List<User> allUsers = userClient.getAllUsers();
-        userFullnameRepository.saveAll(
+        flightsRepository.saveAll(
                 List.of(
-                        UserFullname.builder()
+                        UserFlights.builder()
                                 .userId(allUsers.get(0).getId())
-                                .fullname("username1_fullname")
+                                .flightCode("SU1763")
                                 .build(),
-                        UserFullname.builder()
+                        UserFlights.builder()
                                 .userId(allUsers.get(1).getId())
-                                .fullname("username2_fullname")
+                                .flightCode("SU1763")
                                 .build(),
-                        UserFullname.builder()
+                        UserFlights.builder()
                                 .userId(allUsers.get(2).getId())
-                                .fullname("username3_fullname")
+                                .flightCode("SU1763")
                                 .build()
                 )
         );
-        return userFullnameRepository.findByUserId(userId + 3);
+        return flightsRepository.findByUserId(userId + 3);
     }
 }
