@@ -1,6 +1,6 @@
 import org.example.User;
 import org.example.UserController;
-import org.example.UserFullname;
+import org.example.UserFlights;
 import org.example.FlightsServiceClient;
 import org.example.UserInfoDto;
 import org.example.UserRepository;
@@ -47,14 +47,14 @@ public class UserControllerTest {
     @Test
     void getUserInfo() {
         when(flightsServiceClient.getUserScheduledFlights(anyLong()))
-                .thenReturn(UserFullname.builder().fullname("testFullName").build());
+                .thenReturn(UserFlights.builder().flightCode("testFullName").build());
         when(userRoleClient.getUserRole(anyLong()))
                 .thenReturn(UserRole.builder().roleName("ROLENAME").build());
 
         UserInfoDto actualInfo = userController.getUserInfo(1L);
 
         assertThat(actualInfo).isNotNull();
-        assertThat(actualInfo.fullname().getFullname()).isEqualTo("testFullName");
+        assertThat(actualInfo.fullname().getFlightCode()).isEqualTo("testFullName");
         assertThat(actualInfo.userRole().getRoleName()).isEqualTo("ROLENAME");
     }
 }

@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface FlightsServiceClient {
 
     @GetMapping("/api/user/{userId}/scheduled-flights")
-    UserFullname getUserScheduledFlights(@PathVariable("userId") Long userId);
+    UserFlights getUserScheduledFlights(@PathVariable("userId") Long userId);
 }
 
